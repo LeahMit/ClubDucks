@@ -1,10 +1,22 @@
+* {
+    margin: 0;
+	padding: 0;
+	border-width: 0; 
+}
+
 body {
-	background: #f5e8ff;
+	background: #f9f6fa;
+	display: flex;
+	flex-direction: column;
+	font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
 	text-align: center;
-	font-size: 75px;
+	font-size: 75px; 
+	width: 92%;
+	padding: 10px;
+	border-bottom: 1px solid black;
 }
 
 h2 {
@@ -23,31 +35,18 @@ img {
 }
 
 div{
-	margin: 20px 50px;
-	padding: 18px;
-	background: #ffffff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .transparent {
-	padding: 0px;
-	border: 0px;
+	width: 100%;
 	background-color: transparent;
-	box-shadow: none;
 	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+	justify-content: space-around;
 	flex-flow: row wrap;
-}
-
-.transparent div {
-	flex: 1 1 45%;
-	margin: 20px 20px;
 }
 
 #introduction {
@@ -116,70 +115,6 @@ div{
 #postList div {
 	margin: 0px;
 	padding: 0px;
-}
-
-.ratingContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-}
-
-.rating {
-	max-width: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-}
-
-.rating .description {
-	padding: 0px;
-	border: 5px;
-	background-color: transparent;
-	box-shadow: none;
-	align-self: flex-start;
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: stretch;
-	max-width: 50%;
-}
-
-.rating figure {
-	margin: 5px;
-	padding: 5px;
-	display: flex;
-	justify-content: space-around;
-}
-
-.rating figure img, #postList div .rating figure img, #dogPhotoPreview {
-	height: 500px;
-	width: 400px;
-}
-
-.rating .description .score {
-	color: gold;
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.rating .description .reason {
-	font-weight: 27px;
-}
-
-#ratingExample {
-	width: 100%;
-	padding: 0px;
-	border: 5px;
-	background-color: transparent;
-	box-shadow: none;
-}
-
-#ratingExample + p {
-	color: #565656;
-	font-style: italic;
 }
 
 #postForm {
@@ -284,20 +219,6 @@ select {
 		height: 300px;
 	}
 	
-	.rating figure img, #postList div .rating figure img, #dogPhotoPreview {
-		height: 400px;
-		width: 320px;
-	}
-	
-	.rating .description {
-		align-self: center;
-	}
-	
-	.rating .description, .rating .description .score, .rating .description .reason {
-		width: 100%;
-		max-width: none;
-	}
-	
 	#satForm {
 	flex-flow: column;
 	}
@@ -313,16 +234,6 @@ select {
 	#introduction {
 		flex-direction: column;
 		align-items: center;
-	}
-	
-	.rating figure img, #postList div .rating figure img, #dogPhotoPreview {
-		height: 300px;
-		width: 240px;
-	}
-	
-	.rating {
-		flex-direction: column;
-		justify-content: stretch;
 	}
 	
 	input[type=text], textarea {
@@ -372,11 +283,6 @@ select {
 	#thankyous #pictures figure #shep {
 		width: 200px;
 		height: 199px;
-	}
-	
-	.rating figure img, #postList div .rating figure img, #dogPhotoPreview {
-		height: 250px;
-		width: 200px;
 	}
 	
 	input[type=text], textarea {

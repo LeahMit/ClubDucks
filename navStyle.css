@@ -1,20 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 nav {
-    background-color: #f9a9c8;
+    background-color: #e02215;
     height: 75px;
     position: sticky;
     top: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 	display: flex;
 	justify-content: space-between;
+	color: #fff;
 }
 
 nav p {
-    color: #fff;
     font-size: 45px;
     margin-left: 10px;
     text-decoration: none;
@@ -23,11 +18,11 @@ nav p {
 }
 
 nav a {
+	color: rgb(255, 255, 255);
     text-decoration: none;
 	font-size: 30px;
 	height: 100%;
     box-shadow: 0 0 0 transparent;
-    color: #fff;
     padding: 0 8px;
 	transition: all 0.2s ease-out;
 	display: flex;
@@ -36,7 +31,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #d9a0ff;
+    background-color: #ec3e1f;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transform: scale(1.1, 1.1);
 }
@@ -55,7 +50,7 @@ nav ul {
 }
 
 #endBanner {
-	background: #303030;
+	background: #0e0d0d;
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
