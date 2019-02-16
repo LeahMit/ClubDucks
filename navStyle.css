@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #f9a9c8;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: space-between;
+}
+
+nav p {
+    color: #fff;
+    font-size: 45px;
+    margin-left: 10px;
+    text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+	font-size: 30px;
+	height: 100%;
+    box-shadow: 0 0 0 transparent;
+    color: #fff;
+    padding: 0 8px;
+	transition: all 0.2s ease-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav a:hover {
+    background-color: #d9a0ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1, 1.1);
+}
+
+nav li {
+	padding: 0px 5px;
+	height: 100%;
+}
+
+nav ul {
+	height: 100%;
+    margin-right: 25px;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+#endBanner {
+	background: #303030;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-radius: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#endBanner p {
+	width: 40%;
+	color: white;
+	margin: 10px;
+	font-size: 15px;
+}
+
+#endBanner #endLogo {
+	text-align: right;
+}
+
+#endBanner #endLogo::first-line {
+	font-size: 26px;
+}
+
+@media only screen and (max-width: 998px) { /*Tablet View*/
+
+	nav {
+		position: static;
+	}
+	
+	nav p {
+		font-size: 35px;
+	}
+	
+	nav a {
+		font-size: 25px;
+	}
+	
+	#endBanner p {
+		font-size: 12px;
+	}
+	
+	#endBanner #endLogo::first-line {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 700px) { /*Where the NavBar no longer fits the text horizontally*/
+	nav {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+	
+	nav ul {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 399px) { /*Mobile Phone*/
+
+	nav {
+		height: 200px;
+	}
+	
+	nav p {
+		font-size: 25px;
+	}
+	
+	nav a {
+		margin: 0px 0px;
+		font-size: 21px;
+	}
+	
+	#endBanner p {
+		font-size: 7px;
+	}
+	
+	#endBanner #endLogo::first-line {
+		font-size: 12px;
+	}
+}
