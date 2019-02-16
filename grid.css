@@ -1,8 +1,27 @@
+#GridHolder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    background-color: green;
+}
+
 #Grid {
-    background: #b6b5b5;
-    height: 100px;
-    width: 200px;
-    margin: 10px;
-    margin-top: 20px;
+    background: #e90b0b;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#Grid .row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    padding: 1px;
+}
+
+#Grid .row img {
+    margin: 1px;
 }
 

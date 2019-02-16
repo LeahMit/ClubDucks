@@ -1,4 +1,6 @@
 
+var grid;
+
 function generate( grid ) {
 
     //Full Div container to send everything to
@@ -7,12 +9,28 @@ function generate( grid ) {
     //Establishing box dimensions
     var height = grid.getHeight();
     var width = grid.getWidth();
+    gridSize = height;
     var array = [];
 
-    for( let i = 0; i < height; i++ ) {
-        array.push( document.createElement("div") );
-        array[i].className = "Row";
+    for( let y = 0; y < height; y++ ) {
+        let row = document.createElement("div") 
+        row.className = "row";
+        for( let x = 0; x < width; x++) {
+            let box = document.createElement("img");
+            box.src = "unblocked.png";
+            row.appendChild(box);
+        }
+        gen.appendChild(row);
     }
+}
+
+function gridSize(side) {
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
+    var workingHeight = windowHeight - 200;
+    var imgLength = workingHeight / side;
+
+
 }
 
 /**
