@@ -4,6 +4,7 @@
 	<title>Club Ducks</title>
 	<link rel="stylesheet" type="text/css" href="navStyle.CSS">
 	<link rel="stylesheet" type="text/css" href="style.CSS">
+     <script type="text/javascript" src="formPost.js"></script>
 </head>
 <body>
 	<nav>
@@ -18,11 +19,20 @@
 
      <h2>Puzzles</h2>
 
-     <form>
-          <input type = "text">
-          <input type = "submit">
+
+
+
+     <form id = "userSolution">
+          <input type = "text" name="fname" value ="don">
+          <!-- <input type = "button" onclick="getText()" value="Submit"> -->
      </form>
 
+     <button onclick = "getText()">Subbmit</button>
+
+
+
+
+     <p id="result"></p>
      <div>Text box</div>
 
 	<div id="endBanner">
