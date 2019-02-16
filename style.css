@@ -14,7 +14,7 @@ body {
 h1 {
 	text-align: center;
 	font-size: 75px;
-	width: 100%;
+	width: 92%;
 	padding: 10px;
 	border-bottom: 1px solid black;
 }
@@ -36,7 +36,6 @@ img {
 
 div{
 	width: 100%;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -45,11 +44,8 @@ div{
 .transparent {
 	width: 100%;
 	background-color: transparent;
-	box-shadow: none;
 	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
+	justify-content: space-around;
 	flex-flow: row wrap;
 }
 
