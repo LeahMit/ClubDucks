@@ -42,7 +42,7 @@ function generate( grid , start) {
 
     //Starts moving the arrow
     console.log("Executing Move Order");
-    executeMoveOrder( start, ["right", "right"], arrow, grid);
+    executeMoveOrder( start, ["right", "up", "left", "down", "right", "left"], arrow, grid);
 
 }
 
@@ -54,14 +54,29 @@ function generate( grid , start) {
  * @param {Grid} grid The grid containing the game
  */
 function executeMoveOrder( pos, order, arrow, grid ) {
-    console.log("Move to Execute:")
-    if (order.length > 1) {
-        console.log("Move Exists");
+    console.log("Moves to Execute:" + order.toString() );
+
+    //Check if current position links to a blocked tile
+
+    if (order.length > 0) {
         switch (order[0]) {
             case "right":
-                moveRight(pos, order.slice(1), arrow, grid);
                 console.log("Right");
-        }
+                moveRight(pos, order.slice(1), arrow, grid);
+                break;
+            case "up":
+                console.log("up");
+                moveUp(pos, order.slice(1), arrow, grid);
+                break;
+            case "down":
+                console.log("down");
+                moveDown(pos, order.slice(1), arrow, grid);
+                break;
+            case "left":
+                console.log("left");
+                moveLeft(pos, order.slice(1), arrow, grid);
+                break;
+        }//End of switch statement
     }
 }
 
@@ -88,47 +103,59 @@ function moveRight(pos, order, arrow, grid) {
     }
 }
 
-function moveLeft(xNext) {
-    var x = parseFloat( document.getElementById("arrow").style.left );
+function moveLeft(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX()-1, pos.getY() );
+    xNext = endPos.absoluteX(grid);
+    var x = parseFloat( arrow.style.left );
+
     var id = setInterval(frame, 5);
     function frame() {
         //Animation Loop
         if (xNext > x) {
-        clearInterval(id);
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
         }
         else {
             x--;
-            document.getElementById("arrow").style.left = x.toString() + "px";
+            arrow.style.left = x.toString() + "px";
         }
     }
 }
 
-function moveUp(yNext) {
-    var y = parseFloat( document.getElementById("arrow").style.top );
+function moveUp(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX(), pos.getY()-1 );
+    yNext = endPos.absoluteY(grid);
+    var y = parseFloat( arrow.style.top );
+
     var id = setInterval(frame, 5);
     function frame() {
         //Animation Loop
         if (yNext > y) {
-        clearInterval(id);
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
         }
         else {
             y--;
-            document.getElementById("arrow").style.top = y.toString() + "px";
+            arrow.style.top = y.toString() + "px";
         }
     }
 }
 
-function moveDown(yNext) {
-    var y = parseFloat( document.getElementById("arrow").style.top );
+function moveDown(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX(), pos.getY()+1 );
+    yNext = endPos.absoluteY(grid);
+    var y = parseFloat( arrow.style.top );
+
     var id = setInterval(frame, 5);
     function frame() {
         //Animation Loop
         if (yNext < y) {
-        clearInterval(id);
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
         }
         else {
             y++;
-            document.getElementById("arrow").style.top = y.toString() + "px";
+            arrow.style.top = y.toString() + "px";
         }
     }
 }
