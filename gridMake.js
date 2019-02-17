@@ -308,7 +308,7 @@ window.onload = () => {
     console.log("Window Loading");
 
     //Populating the BoardArray variable
-    boardArray.push( new Grid([ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
+    boardArray.push( new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
         [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
         ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
         ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
@@ -319,8 +319,34 @@ window.onload = () => {
         ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png"],
         ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "lilypad.png"],
         ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "waves.gif"],
-        ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ], new Point( 0, 0) ));
+        ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ], new Point( 0, 0) )); //Second Level
+    
+    boardArray.push( new Grid( [ ["cattail.png", "cattail.png", "waves.gif", "waves.gif", "start.png", "cattail.png"],
+        ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif", "cattail.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png"],
+        ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "cattail.png", "lilypad.png"],
+        ["cattail.png", "cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ], new Point(4, 0) )); //Third Level
+    
+    boardArray.push( new Grid( [ ["cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png"],
+        ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "cattail.png", "cattail.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "waves.gif", "waves.gif", "start.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
+        ["lilypad.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "waves.gif", "waves.gif"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif"],
+        ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ], new Point(7,2) )); //Fourth Level
 
+    boardArray.push( new Grid( [ ["cattail.png", "cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "start.png"],
+        ["cattail.png", "cattail.png", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif", "cattail.png"],
+        ["cattail.png", "cattail.png", "waves.gif", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "waves.gif", "waves.gif", "cattail.png"],
+        ["cattail.png", "cattail.png", "cattail.png", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
+        ["cattail.png", "cattail.png", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
+        ["waves.gif", "waves.gif", "waves.gif", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
+        ["cattail.png", "cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],  
+        ["cattail.png", "cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
+        ["lilypad.png", "cattail.png", "waves.gif", "waves.gif", "waves.gif", "cattail.png", "waves.gif", "waves.gif", "cattail.png", "cattail.png"],
+        ["waves.gif", "waves.gif", "waves.gif", "cattail.png", "waves.gif", "waves.gif", "waves.gif", "cattail.png", "cattail.png", "cattail.png"] ], new Point(9, 0) )); //Fifth Level
     generate(boardArray[curBoard]) //End first argument
  };
 
