@@ -29,7 +29,7 @@ nav {
 
 #postForm {
     display: flex;
-    
+    flex-flow: row nowrap;
 }
 
 
