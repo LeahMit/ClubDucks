@@ -39,9 +39,12 @@ h2 {
 p {
 	font-size: 27px;
 	margin: 15px;
-	text-align: center;
 }
 
+.bullet {
+	font-size: 20px;
+	margin: 30px;
+}
 .prettyprint{
 	margin: 70px 100px;
 	padding: 50px 0px;
@@ -80,6 +83,9 @@ div{
 	display: flex;
 	justify-content: space-around;
 	flex-flow: row wrap;
+}
+#MainPage{
+	display: block;
 }
 .puzzleTitle{
 	font-size: 64px;
@@ -328,7 +334,7 @@ select {
 
 
 }
-	
+
 	#gridimage {
 		max-width:50%;
 	}
