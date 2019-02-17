@@ -84,6 +84,9 @@ div{
 	justify-content: space-around;
 	flex-flow: row wrap;
 }
+#MainPage{
+	display: block;
+}
 .puzzleTitle{
 	font-size: 64px;
 	margin-top: 20px;
@@ -331,7 +334,7 @@ select {
 
 
 }
-	
+
 	#gridimage {
 		max-width:50%;
 	}
