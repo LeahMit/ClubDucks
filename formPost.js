@@ -63,11 +63,11 @@ function submitAnswer2(){
      }
      else if(q2Complete == true){
           document.getElementById("correctness2").style.color = "green";
-          document.getElementById("correctness2").innerHTML = "You already answered this correctly!";
+          document.getElementById("correctness2").innerHTML = "You already answered this correctly?";
      }
      else{
           document.getElementById("correctness2").style.color = "red";
-          document.getElementById("correctness2").innerHTML = "Incorrect, try again"";
+          document.getElementById("correctness2").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result2").innerHTML = "Your answer was: " + text;
      return false;
