@@ -6,7 +6,7 @@
 
 nav p{
 	font-family: 'Titillium Web', 'Exo';
-	font-weight: 900;
+	font-weight: 700;
 }
 
 .duck {
@@ -96,9 +96,6 @@ div{
 }
 #MainPage{
 	display: block;
-}
-.puzzleTitle{
-	margin-top: 20px;
 }
 
 #introduction {
