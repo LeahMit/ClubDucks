@@ -39,7 +39,7 @@ h2 {
 	font-size: 	38px;
 	font-weight: 	bold;
 	text-align: 	center;
-	color: 		red;
+	color: 		#e51d1d;
 }
 
 h3 {
@@ -78,12 +78,16 @@ p {
 }
 #coinCount{
 	position:		sticky;
-	top: 90px;
-	margin-top: 50px;
+	top: 		90px;
+	margin-right: 	30px;
 	text-align:  	right;
+	animation:      glowText       .7s 2.5s                    forwards,
 }
 #coinNumber{
 	display: 		none;
+}
+#puzzleDescription{
+	margin: 0 20vw;
 }
 
 img {
@@ -175,7 +179,18 @@ select {
 
 @media only screen and (max-width: 998px) { /*Tablet View*/
 	h1 {
-		font-size: 55px;
+	 	font-size: 55px;
+	}
+
+	#coinCount{
+		position:		sticky;
+		top: 		10px;
+		margin-right: 	30px;
+		text-align:  	right;
+	}
+
+	#puzzleDescription{
+		margin: 0 5vw;
 	}
 
 	h2 {
@@ -225,10 +240,18 @@ select {
 		align-items: center;
 	}
 
+
 	input[type=text], textarea {
 		width: 70%;
 	}
-
+	.prettyprint{
+		margin: 		7px 2 vw;
+		padding: 		50px 0px;
+		font-family: 	'Cousine', monospace;
+		background-color: 	#f4f4f4;
+		border-radius: 25px 25px;
+		color: 		#6d6d6d;
+	}
 }
 
 @media only screen and (max-width: 399px) { /*Mobile Phone*/
@@ -293,4 +316,25 @@ select {
 
 a {
 	font-size: 	27px;
+}
+
+#coinCount{
+	position:		sticky;
+	top: 		90px;
+	margin-right: 	30px;
+	text-align:  	right;
+	animation-name: glowText;
+	animation-duration: 1.5s;
+}
+
+@keyframes glowText {
+	0%{
+	    color:		black;
+	}
+	25%{
+		color: 		#c9be58;
+	}
+	100%{
+		color:		black;
+	}
 }
