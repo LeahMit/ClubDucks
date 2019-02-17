@@ -1,8 +1,14 @@
 #GridHolder {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+}
+
+#GridHolder .transparent {
+    max-width: 25%;
+    display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
 }
 
 #Grid {
@@ -34,11 +40,20 @@ nav {
 }
 
 #postForm {
-    box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.418);
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
-    align-content: stretch;
+    align-content: center;
 }
 
+#postForm p {
+    width: 100%;
+}
 
+#postForm p label {
+    min-width: 50%;
+}
+
+#postForm p input {
+    min-width: 65%;
+}
