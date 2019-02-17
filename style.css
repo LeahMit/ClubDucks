@@ -56,7 +56,7 @@ p {
 	margin: 		30px;
 }
 .prettyprint{
-	margin: 		70px 100px;
+	margin: 		70px 18vw;
 	padding: 		50px 0px;
 	font-family: 	'Cousine', monospace;
 	background-color: 	#efefef;
@@ -115,6 +115,15 @@ input[type=text], textarea {
 	background: 	#c9ddc5;
 	color: 		white;
 	font-size: 	1em;
+}
+
+
+input [type=radio] {
+	color: 		#f9a9c8;
+}
+
+.question{
+	text-align: center;
 }
 
 button {
