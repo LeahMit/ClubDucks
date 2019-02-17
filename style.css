@@ -84,92 +84,6 @@ div{
 	justify-content: space-around;
 	flex-flow: row wrap;
 }
-#MainPage{
-	display: block;
-}
-.puzzleTitle{
-	font-size: 64px;
-	margin-top: 20px;
-}
-
-#introduction {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: stretch;
-}
-
-#introduction figure {
-	height: 350px;
-	width: 40%;
-	display: flex;
-	justify-content: space-evenly;
-}
-
-#introduction figure img {
-	width: 283px;
-	height: 100%;
-	display: block;
-}
-
-#introduction h1 {
-	margin: auto;
-	vertical-align: middle;
-}
-
-#thankyous #pictures {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 100%;
-}
-
-#thankyous #pictures figure {
-	background: #e2e6ff;
-	padding: 5px 15px 10px 15px;
-	border-radius: 3px;
-	box-shadow: 0 2px 4px #c0bbce;
-	margin: 10px 15px;
-}
-
-#thankyous #pictures figure #norman {
-	width: 454px;
-	height: 478px;
-}
-
-#thankyous #pictures figure #shep {
-	width: 479px;
-	height: 478px;
-}
-
-#thankyous #pictures figure figcaption {
-	font-size: 27px;
-}
-
-#postList {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	background: transparent;
-	box-shadow: none;
-}
-
-#postList div {
-	margin: 0px;
-	padding: 0px;
-}
-
-#postForm {
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	flex-flow: column nowrap;
-}
-
-#postForm p label {
-	font-size: 1.1em;
-}
 
 input[type=text], textarea {
     width: 50%;
@@ -201,20 +115,6 @@ button {
 
 button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-#satForm {
-	width: 90%;
-	display: flex;
-	flex-flow: row;
-	justify-content: center;
-}
-
-section {
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	margin: 10px 5%;
 }
 
 select {
