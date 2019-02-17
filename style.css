@@ -90,6 +90,91 @@ div{
 	justify-content: space-around;
 	flex-flow: row wrap;
 }
+#MainPage{
+	display: block;
+}
+.puzzleTitle{
+	margin-top: 20px;
+}
+
+#introduction {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: stretch;
+}
+
+#introduction figure {
+	height: 350px;
+	width: 40%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#introduction figure img {
+	width: 283px;
+	height: 100%;
+	display: block;
+}
+
+#introduction h1 {
+	margin: auto;
+	vertical-align: middle;
+}
+
+#thankyous #pictures {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+
+#thankyous #pictures figure {
+	background: #e2e6ff;
+	padding: 5px 15px 10px 15px;
+	border-radius: 3px;
+	box-shadow: 0 2px 4px #c0bbce;
+	margin: 10px 15px;
+}
+
+#thankyous #pictures figure #norman {
+	width: 454px;
+	height: 478px;
+}
+
+#thankyous #pictures figure #shep {
+	width: 479px;
+	height: 478px;
+}
+
+#thankyous #pictures figure figcaption {
+	font-size: 27px;
+}
+
+#postList {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	background: transparent;
+	box-shadow: none;
+}
+
+#postList div {
+	margin: 0px;
+	padding: 0px;
+}
+
+#postForm {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: column nowrap;
+}
+
+#postForm p label {
+	font-size: 1.1em;
+}
 
 input[type=text], textarea {
     width: 50%;
@@ -248,6 +333,7 @@ select {
 	.titles {
 		font-size: 40px;
 		color:red;
+		margin-top: 70px;
 	}
 
 	a {
