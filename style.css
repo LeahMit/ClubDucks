@@ -208,20 +208,6 @@ button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#satForm {
-	width: 90%;
-	display: flex;
-	flex-flow: row;
-	justify-content: center;
-}
-
-section {
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	margin: 10px 5%;
-}
-
 select {
     min-width: 10%;
 	max-width: 20%;
