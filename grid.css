@@ -1,0 +1,26 @@
+#GridHolder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#Grid {
+    background: #d8d2d2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#Grid .row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
