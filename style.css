@@ -13,7 +13,7 @@ body {
 	background: #f9f6fa;
 	display: flex;
 	flex-direction: column;
-	font-family: "Times New Roman", Times, serif;
+	font-family: 'Titillium Web', "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -34,6 +34,21 @@ h2 {
 p {
 	font-size: 27px;
 	margin: 15px;
+}
+
+.prettyprint{
+	margin: 60px;
+	padding: 50px 0px;
+	font-family: 'Cousine', monospace;
+	background-color: 	#efefef;
+	border-radius: 25px;
+	color: #6d6d6d;
+}
+.question{
+	padding: 50px;
+}
+#correctAnswer{
+	color: green;
 }
 
 img {
