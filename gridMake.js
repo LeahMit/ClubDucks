@@ -39,11 +39,6 @@ function generate( grid , start) {
     console.log( arrow.style.left );
     gen.appendChild(arrow);
 
-
-    //Starts moving the arrow
-    console.log("Executing Move Order");
-    executeMoveOrder( start, ["right", "up", "left", "down", "right", "left"], arrow, grid);
-
 }
 
 /**
@@ -56,8 +51,15 @@ function generate( grid , start) {
 function executeMoveOrder( pos, order, arrow, grid ) {
     console.log("Moves to Execute:" + order.toString() );
 
+    //Check if position is off the board
+    if (pos.getX() < 0 || pos.getX() >= grid.getWidth() || pos.getY() < 0 || pos.getY() >= grid.getHeight()) {
+        alert("You're body moved outside the region");
+        return;
+    }
+    
     //Check if current position links to a blocked tile
 
+    //Execute the move
     if (order.length > 0) {
         switch (order[0]) {
             case "right":
@@ -225,10 +227,11 @@ class Point {
 
 window.onload = () => {
     // Once our window is loaded, we generate the first grid
-    generate( new Grid( [ ["blocked.png", "unblocked.png", "stop.png", "unblocked.png", "unblocked.png"],
-    [ "blocked.png", "blocked.png", "blocked.png", "blocked.png", "unblocked.png" ],
-    ["blocked.png", "unblocked.png", "unblocked.png", "blocked.png", "unblocked.png"],
-    ["blocked.png", "unblocked.png", "unblocked.png", "unblocked.png", "unblocked.png"],
-    ["start.png", "unblocked.png", "blocked.png", "unblocked.png", "unblocked.png"] ] ) , //End first argument
-    new Point( 2.0, 2.0 ) );
+
+    generate( new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
+    [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
+    ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
+    ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
+    ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] ) , //End first argument
+    new Point( 0, 4 ) );
  };
