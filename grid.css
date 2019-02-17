@@ -12,6 +12,7 @@
     align-items: center;
     padding: 15px;
     border-radius: 5px;
+    position: static;
 }
 
 #Grid .row {
@@ -21,6 +22,5 @@
     align-content: center;
 }
 
-/*#Grid .row img {
-}*/
+
 
