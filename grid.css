@@ -1,12 +1,12 @@
-#GridHolder {
+#Left #GridHolder {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-content: stretch;
+    align-items: stretch;
 }
 
-#GridHolder .transparent {
-    max-width: 25%;
+#Left #GridHolder .transparent {
+    max-width: 50%;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -22,10 +22,65 @@
     margin: 10px;
 }
 
+#Puzzle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#Left, #Right {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Puzzle #Right #Answers {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    background: #d5f1d4;
+    border: 10px;
+    margin: 10px 0px;
+}
+
+#Puzzle #Right #Answers #postForm {
+    min-height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#Puzzle #Right #Answers .transparent {
+    min-height: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Puzzle #Right #Answers #postForm textarea {
+    min-width: 80%;
+    min-height: 70%;
+    padding: 0px;
+    margin: 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 	2em;
+}
+
+#Puzzle #Right #Answers #postform button {
+    min-height: 20%;
+}
+
 #Grid .row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-items: center;
     align-content: center;
     margin: 0px;
     padding: 0px;
@@ -53,7 +108,7 @@ nav {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
 }
 
 #postForm p {

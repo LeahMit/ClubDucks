@@ -24,23 +24,32 @@
 	<div id="Title">
 		<h1>Can you solve the all the levels?</h1>
 	</div>
-	<div id="GridHolder">
-		<div class="transparent">
-			<button id="PrevButton" type="button" onclick="previousLevel()">Previous Level</button>
-			<p>Feeling a little Confident?</p>
-			<button id="NextButton" type="button" onclick="nextLevel()">Next Level</button>
-			<p id="LevelDetails"></p>
+	<div id="Puzzle">
+
+		<div id="Left">
+			<div id="GridHolder">
+				<div id="Grid">
+				</div>
+			</div>
 		</div>
-		<div id="Grid">
+		
+		<div id="Right">
+			<div id="Answers">
+				<form class="transparent" id="postForm" onSubmit="return false;">
+					<textarea placeholder = "Type your solution here!" type="text" id="solution"></textarea>
+					<button type="button" onclick="handleForm()">Submit Post!</button>
+				</form>
+				<div class="transparent">
+					<div>
+						<button id="PrevButton" type="button" onclick="previousLevel()">Previous Level</button>
+						<p>Feeling a little Confident?</p>
+						<button id="NextButton" type="button" onclick="nextLevel()">Next Level</button>
+					</div>
+					<p id="LevelDetails"></p>
+				</div>
+				<p id="Response"></p>
+			</div>
 		</div>
-		<form class="transparent" id="postForm" onSubmit="return false;">
-			<p>
-				<label>Your Solution Here</label>
-				<input type="text" id="solution" name="dogName">
-			</p>
-			<button type="button" onclick="handleForm()">Submit Post!</button>
-			<p id="Response"></p>
-		</form>
 	</div>
 
 	<div>

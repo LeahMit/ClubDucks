@@ -133,10 +133,6 @@ input[type=text], textarea {
 }
 
 
-input [type=radio] {
-	color: 		#f9a9c8;
-}
-
 .question{
 	text-align: center;
 }
