@@ -74,7 +74,7 @@ function executeMoveOrder( pos, order, arrow, grid ) {
     if (order.length > 0) {
         switch (order[0]) {
             case "right":
-                console.log("Right");
+                console.log("right");
                 moveRight(pos, order.slice(1), arrow, grid);
                 break;
             case "up":
@@ -102,8 +102,12 @@ function moveRight(pos, order, arrow, grid) {
     xNext = endPos.absoluteX(grid);
     var x = parseFloat( arrow.style.left );
 
+    console.log("Entering Loop");
     var id = setInterval(frame, 5);
+    console.log("Past var id");
+
     function frame() {
+        console.log("Loop frame");
         //Animation Loop
         if (xNext < x) {
             clearInterval(id);
@@ -179,7 +183,7 @@ function moveDown(pos, order, arrow, grid) {
 class Grid {
 
     constructor(array, start) {
-        console.log("Works so far");
+        console.log("Generating Grid");
         this.boxes = array;
         this.height = array.length;
         this.width = array[0].length;
@@ -265,6 +269,8 @@ function handleForm() {
 
 window.onload = () => {
     // Once our window is loaded, we generate the first grid
+
+    console.log("Window Loading");
 
     curBoard = new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
     [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
