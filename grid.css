@@ -27,13 +27,26 @@
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
+    background: #d5f1d4;
+    z-index: 5;
+    margin: 0px;
 }
 
 #Left, #Right {
+    width: 50%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    margin: 20px 0px;
+    margin-bottom: 30px;
+}
+
+#Left {
     align-items: center;
+}
+
+#Right {
+    align-items: stretch;
 }
 
 #Puzzle #Right #Answers {
@@ -42,9 +55,10 @@
     justify-content: space-between;
     align-items: stretch;
     height: 100%;
-    background: #d5f1d4;
-    border: 10px;
-    margin: 10px 0px;
+    background: rgb(144, 214, 219);
+    border: 5px;
+    border-radius: 5px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #Puzzle #Right #Answers #postForm {
@@ -67,7 +81,8 @@
     min-width: 80%;
     min-height: 70%;
     padding: 0px;
-    margin: 5px;
+    margin: 10px;
+    margin-top: 17px;
     border: none;
     border-radius: 3px;
     font-size: 	2em;
@@ -98,7 +113,8 @@ nav {
 }
 
 #Description {
-    margin-top: 20px;
+    margin-top: 0px;
+    z-index: 9;
     box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.418);
     width: 100%;
     text-align: center;
