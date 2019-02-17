@@ -5,5 +5,8 @@ function getText(){
      for (i = 0;  i < y.length;  i++){
           text += y.elements[i].value + "<br>";
      }
+     if (text == "hey<br>"){
+          console.log("the");
+     }
      document.getElementById("resultr").innerHTML = text;
 }
