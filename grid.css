@@ -56,4 +56,11 @@ nav {
 
 #postForm p input {
     min-width: 65%;
+    min-height: 70px;
+}
+
+#LevelDetails {
+    font-style: italic;
+    color: gray;
+    font-size: 1.3em;
 }

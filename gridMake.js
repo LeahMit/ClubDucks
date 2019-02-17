@@ -70,13 +70,15 @@ function executeMoveOrder( pos, order, arrow, grid ) {
 
     //Check if position is off the board
     if (pos.getX() < 0 || pos.getX() >= grid.getWidth() || pos.getY() < 0 || pos.getY() >= grid.getHeight()) {
-        alert("You're body moved outside the region");
+        document.getElementById("Response").innerHTML = "You ran off the board, try again and avoid edges this time";
+        resetArrow(grid);
         return;
     }
     
     //Check if current position links to a blocked tile
     if ( grid.getBox( pos.getX(), pos.getY() ) == "cattail.png" ) {
-        alert("You've moved into a blocked region");
+        document.getElementById("Response").innerHTML = "You ran into a Cattail, try again and avoid them this time";
+        resetArrow(grid);
         return;
     }
 
@@ -99,6 +101,9 @@ function executeMoveOrder( pos, order, arrow, grid ) {
                 console.log("left");
                 moveLeft(pos, order.slice(1), arrow, grid);
                 break;
+            case "end":
+                console.log("End of walk");
+                checkVictory(pos, grid);
         }//End of switch statement
     }
 }
@@ -279,7 +284,17 @@ function handleForm() {
     }
     var arrow = resetArrow(boardArray[curBoard]);
     executeMoveOrder( boardArray[curBoard].getStart(), solution, arrow, boardArray[curBoard]);
-    return false;
+}
+
+/**
+ * Gives a cute little message if you completed the level
+ * @param {Point} pos 
+ * @param {Grid} grid 
+ */
+function checkVictory(pos, grid) {
+   if ( grid.getBox( pos.getX(), pos.getY() ) == "lilypad.png" ) {
+       alert("you won");
+   }
 }
 
 function previousLevel() {
@@ -289,6 +304,15 @@ function previousLevel() {
     else {
         removeBoard();
         generate( boardArray[ --curBoard ] );
+        if(curBoard == 0) {
+            document.getElementById("PrevButton").style.visibility = "hidden";
+            document.getElementById("LevelDetails").innerHTML = "You're at the lowest level";
+        }
+        else {
+            document.getElementById("NextButton").style.visibility = "visible";
+            document.getElementById("PrevButton").style.visibility = "visible";
+            document.getElementById("LevelDetails").innerHTML = "";
+        } 
     }
 }
 
@@ -299,6 +323,17 @@ function nextLevel() {
     else {
         removeBoard();
         generate( boardArray[ ++curBoard ] );
+
+        if(curBoard + 1 >= boardArray.length) {
+            document.getElementById("NextButton").style.visibility = "hidden";
+            document.getElementById("LevelDetails").innerHTML = "You're at the highest level";
+        }
+        else {
+            document.getElementById("NextButton").style.visibility = "visible";
+            document.getElementById("PrevButton").style.visibility = "visible";
+            document.getElementById("LevelDetails").innerHTML = "";
+        }
+        
     }
 }
 
@@ -347,6 +382,10 @@ window.onload = () => {
         ["cattail.png", "cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png", "waves.gif", "cattail.png", "cattail.png"],
         ["lilypad.png", "cattail.png", "waves.gif", "waves.gif", "waves.gif", "cattail.png", "waves.gif", "waves.gif", "cattail.png", "cattail.png"],
         ["waves.gif", "waves.gif", "waves.gif", "cattail.png", "waves.gif", "waves.gif", "waves.gif", "cattail.png", "cattail.png", "cattail.png"] ], new Point(9, 0) )); //Fifth Level
+    //Finished making levels
+    
+    document.getElementById("PrevButton").style.visibility = "hidden";
+    document.getElementById("LevelDetails").innerHTML = "You're at the lowest level";
     generate(boardArray[curBoard]) //End first argument
  };
 
