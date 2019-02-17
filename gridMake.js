@@ -51,6 +51,12 @@ function generate( grid , start) {
 function executeMoveOrder( pos, order, arrow, grid ) {
     console.log("Moves to Execute:" + order.toString() );
 
+    //Check if position is off the board
+    if (pos.getX() < 0 || pos.getX() >= grid.getWidth() || pos.getY() < 0 || pos.getY() >= grid.getHeight()) {
+        alert("You're body moved outside the region");
+        return;
+    }
+    
     //Check if current position links to a blocked tile
 
     //Execute the move
@@ -227,5 +233,5 @@ window.onload = () => {
     ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
     ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
     ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] ) , //End first argument
-    new Point( 0, 5 ) );
+    new Point( 0, 4 ) );
  };
