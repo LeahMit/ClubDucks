@@ -312,4 +312,19 @@ select {
 	input[type=text], textarea {
 		width: 80%;
 	}
+
+
 }
+	
+	#gridimage {
+		max-width:50%;
+	}
+
+	.titles {
+		font-size: 40px;
+		color:red;
+	}
+
+	a {
+		font-size: 27px;
+	}
