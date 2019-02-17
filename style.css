@@ -37,7 +37,7 @@ p {
 }
 
 .prettyprint{
-	margin: 60px;
+	margin: 70px 100px;
 	padding: 50px 0px;
 	font-family: 'Cousine', monospace;
 	background-color: 	#efefef;
@@ -45,7 +45,7 @@ p {
 	color: #6d6d6d;
 }
 .question{
-	padding: 50px;
+	padding: 50px 50px 0px 50px;
 }
 #correctAnswer{
 	color: green;
@@ -67,6 +67,10 @@ div{
 	display: flex;
 	justify-content: space-around;
 	flex-flow: row wrap;
+}
+.puzzleTitle{
+	font-size: 64px;
+	margin-top: 20px;
 }
 
 #introduction {
