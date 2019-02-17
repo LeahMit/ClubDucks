@@ -222,10 +222,10 @@ class Point {
 window.onload = () => {
     // Once our window is loaded, we generate the first grid
 
-    generate( new Grid( [ ["blocked.png", "waves.gif", "stop.png", "waves.gif", "waves.gif"],
-    [ "blocked.png", "blocked.png", "blocked.png", "blocked.png", "waves.gif" ],
-    ["blocked.png", "waves.gif", "waves.gif", "blocked.png", "waves.gif"],
-    ["blocked.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
+    generate( new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
+    [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
+    ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
+    ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
     ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] ) , //End first argument
     new Point( 0, 5 ) );
  };
