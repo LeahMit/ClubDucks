@@ -1,80 +1,80 @@
 * {
-    margin: 0;
-	padding: 0;
-	border-width: 0;
+	margin: 		0;
+	padding: 		0;
+	border-width:	0;
 }
 
 nav p{
-	font-family: 'Titillium Web', 'Exo';
-	font-weight: 700;
+	font-family: 	'Titillium Web', 'Exo';
+	font-weight: 	700;
 }
 
 .duck {
-	width:50%;
+	width:		50%;
 }
 
 body {
-	background: #f9f6fa;
-	display: flex;
+	background: 	#f9f6fa;
+	display: 		flex;
 	flex-direction: column;
-	font-family: 'Titillium Web', "Times New Roman", Times, serif;
+	font-family: 	'Titillium Web', "Times New Roman", Times, serif;
 }
 
 #Title {
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.418);
+	box-shadow: 	0 6px 10px rgba(0, 0, 0, 0.418);
 }
 
 h1 {
 
-	text-align: center;
-	font-size: 75px;
-	width: 92%;
-	padding: 10px;
+	text-align:	center;
+	font-size: 	75px;
+	width: 		92%;
+	padding: 		10px;
 	border-bottom: 1px solid black;
 }
 
 h2 {
-	font-size: 38px;
-	font-weight: bold;
-	text-align: center;
-	color: red;
+	font-size: 	38px;
+	font-weight: 	bold;
+	text-align: 	center;
+	color: 		red;
 }
 
 h3 {
-	font-size: 25px;
-	font-weight: bold;
-	text-align: center;
+	font-size: 	25px;
+	font-weight: 	bold;
+	text-align: 	center;
 }
 
 p {
-	font-size: 27px;
-	margin: 15px;
+	font-size: 	27px;
+	margin: 		15px;
 }
 
 .bullet {
-	font-size: 20px;
-	margin: 30px;
+	font-size: 	20px;
+	margin: 		30px;
 }
 .prettyprint{
-	margin: 70px 100px;
-	padding: 50px 0px;
-	font-family: 'Cousine', monospace;
+	margin: 		70px 100px;
+	padding: 		50px 0px;
+	font-family: 	'Cousine', monospace;
 	background-color: 	#efefef;
 	border-radius: 25px 25px;
-	color: #6d6d6d;
+	color: 		#6d6d6d;
 }
 .question{
-	padding: 0px 50px 0px 50px;
+	padding: 		0px 50px 0px 50px;
 }
 #correctAnswer{
-	color: green;
+	color: 		green;
 }
 #coinCount{
-	text-align:  right;
-	margin-right: 40px;
+	text-align:  	right;
+	margin-right: 	40px;
 }
 #coinNumber{
-	display: none;
+	display: 		none;
 }
 
 img {
@@ -82,127 +82,133 @@ img {
 }
 
 div{
-	display: flex;
+	display: 		flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: 	center;
 }
 
 .transparent {
-	width: 100%;
+	width: 		100%;
 	background-color: transparent;
-	display: flex;
+	display: 		flex;
 	justify-content: space-around;
-	flex-flow: row wrap;
+	flex-flow: 	row wrap;
 }
 #MainPage{
-	display: block;
+	display: 		block;
 }
 
 #introduction {
-	display: flex;
+	display: 		flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: stretch;
+	align-items: 	stretch;
 }
 
 #introduction figure {
-	height: 350px;
-	width: 40%;
-	display: flex;
+	height: 		350px;
+	width: 		40%;
+	display: 		flex;
 	justify-content: space-evenly;
 }
 
 #introduction figure img {
-	width: 283px;
-	height: 100%;
-	display: block;
+	width: 		283px;
+	height: 		100%;
+	display: 		block;
 }
 
 #introduction h1 {
-	margin: auto;
+	margin: 		auto;
 	vertical-align: middle;
 }
 
 #thankyous #pictures {
-	display: flex;
+	display: 		flex;
 	flex-direction: row;
 	justify-content: space-around;
-	width: 100%;
+	width: 		100%;
 }
 
 #thankyous #pictures figure {
-	background: #e2e6ff;
-	padding: 5px 15px 10px 15px;
+	background: 	#e2e6ff;
+	padding: 		5px 15px 10px 15px;
 	border-radius: 3px;
-	box-shadow: 0 2px 4px #c0bbce;
-	margin: 10px 15px;
+	box-shadow: 	0 2px 4px #c0bbce;
+	margin: 		10px 15px;
 }
 
 #thankyous #pictures figure #norman {
-	width: 454px;
-	height: 478px;
+	width: 		454px;
+	height: 		478px;
 }
 
 #thankyous #pictures figure #shep {
-	width: 479px;
-	height: 478px;
+	width: 		479px;
+	height: 		478px;
 }
 
 #thankyous #pictures figure figcaption {
-	font-size: 27px;
+	font-size: 	27px;
 }
 
 #postList {
-	display: flex;
-	flex-flow: column nowrap;
+	display: 		flex;
+	flex-flow: 	column nowrap;
 	justify-content: flex-start;
-	align-items: stretch;
-	background: transparent;
-	box-shadow: none;
+	align-items: 	stretch;
+	background: 	transparent;
+	box-shadow: 	none;
 }
 
 #postList div {
-	margin: 0px;
-	padding: 0px;
+	margin: 		0px;
+	padding: 		0px;
 }
 
 #postForm {
-	width: 100%;
-	display: flex;
+	width: 		100%;
+	display: 		flex;
 	justify-content: flex-start;
-	flex-flow: column nowrap;
+	flex-flow: 	column nowrap;
 }
 
 #postForm p label {
-	font-size: 1.1em;
+	font-size: 	1.1em;
+}
+
+.textBox{
+	text-align: center;
+	/* align-items: center; */
 }
 
 input[type=text], textarea {
-    width: 50%;
-    padding: 5px 7px;
-	border: 2px solid silver;
+    	width: 		250px;
+    	padding: 		15px 7px;
+	border: 		none;
+	border-bottom: 3px silver;
 	border-radius: 3px;
-	background: red;
-	color: white;
-	font-size: 1em;
+	background: 	#c9ddc5;
+	color: 		white;
+	font-size: 	1em;
 }
 
 input [type=radio] {
-	color: #f9a9c8;
+	color: 		#f9a9c8;
 }
 
 button {
-    background-color: #f9a9c8;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-	margin: 15px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-	border-radius: 3px;
-	border: 2px solid #ff7070;
+	background-color: 	#6ab1e8;
+	border: 			none;
+	color: 			white;
+	padding: 			15px 32px;
+	margin: 			15px 10px;
+	text-align: 		center;
+	text-decoration: 	none;
+	/* display: 			inline-block; */
+	font-size: 		16px;
+	border-radius: 	3px;
+	/* border: 			2px solid #ff7070; */
 }
 
 button:hover {
@@ -210,13 +216,13 @@ button:hover {
 }
 
 select {
-    min-width: 10%;
-	max-width: 20%;
-    padding: 5px;
-    border: none;
-    border-radius: 4px;
-    background: #f9a9c8;
-	color: white;
+	min-width: 		10%;
+	max-width: 		20%;
+	padding: 			5px;
+	border: 			none;
+	border-radius: 	4px;
+	background: 		#f9a9c8;
+	color: 			white;
 }
 
 @media only screen and (max-width: 998px) { /*Tablet View*/
@@ -327,16 +333,16 @@ select {
 
 }
 
-	#gridimage {
-		max-width:50%;
-	}
+#gridimage {
+	max-width:	50%;
+}
 
-	.titles {
-		font-size: 40px;
-		color:red;
-		margin-top: 70px;
-	}
+.titles {
+	font-size: 	40px;
+	color:		red;
+	margin-top: 	70px;
+}
 
-	a {
-		font-size: 27px;
-	}
+a {
+	font-size: 	27px;
+}
