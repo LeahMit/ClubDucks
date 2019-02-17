@@ -20,6 +20,10 @@ body {
 	font-family: 'Titillium Web', "Times New Roman", Times, serif;
 }
 
+#Title {
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.418);
+}
+
 h1 {
 
 	text-align: center;
