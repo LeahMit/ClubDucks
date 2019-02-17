@@ -9,6 +9,10 @@ nav p{
 	font-weight: 900;
 }
 
+.duck {
+	width:50%;
+}
+
 body {
 	background: #f9f6fa;
 	display: flex;
@@ -29,11 +33,13 @@ h2 {
 	font-size: 38px;
 	font-weight: bold;
 	text-align: center;
+	color: red;
 }
 
 p {
 	font-size: 27px;
 	margin: 15px;
+	text-align: center;
 }
 
 .prettyprint{
@@ -41,7 +47,7 @@ p {
 	padding: 50px 0px;
 	font-family: 'Cousine', monospace;
 	background-color: 	#efefef;
-	border-radius: 25px;
+	border-radius: 25px 25px;
 	color: #6d6d6d;
 }
 .question{
@@ -319,4 +325,19 @@ select {
 	input[type=text], textarea {
 		width: 80%;
 	}
+
+
 }
+	
+	#gridimage {
+		max-width:50%;
+	}
+
+	.titles {
+		font-size: 40px;
+		color:red;
+	}
+
+	a {
+		font-size: 27px;
+	}
