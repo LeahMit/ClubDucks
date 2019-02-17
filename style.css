@@ -13,7 +13,7 @@ body {
 	background: #f9f6fa;
 	display: flex;
 	flex-direction: column;
-	font-family: "Times New Roman", Times, serif;
+	font-family: 'Titillium Web', "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -36,6 +36,21 @@ p {
 	margin: 15px;
 }
 
+.prettyprint{
+	margin: 70px 100px;
+	padding: 50px 0px;
+	font-family: 'Cousine', monospace;
+	background-color: 	#efefef;
+	border-radius: 25px;
+	color: #6d6d6d;
+}
+.question{
+	padding: 50px 50px 0px 50px;
+}
+#correctAnswer{
+	color: green;
+}
+
 img {
 	image-orientation: from-image;
 }
@@ -52,6 +67,10 @@ div{
 	display: flex;
 	justify-content: space-around;
 	flex-flow: row wrap;
+}
+.puzzleTitle{
+	font-size: 64px;
+	margin-top: 20px;
 }
 
 #introduction {
@@ -293,4 +312,19 @@ select {
 	input[type=text], textarea {
 		width: 80%;
 	}
+
+
 }
+	
+	#gridimage {
+		max-width:50%;
+	}
+
+	.titles {
+		font-size: 40px;
+		color:red;
+	}
+
+	a {
+		font-size: 27px;
+	}

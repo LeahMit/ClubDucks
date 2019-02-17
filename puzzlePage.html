@@ -6,11 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="style.CSS">
      <script type="text/javascript" src="formPost.js"></script>
      <link href="https://fonts.googleapis.com/css?family=Exo:700,900|Titillium+Web:700,900" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Cousine|Titillium+Web:300,400,700,900" rel="stylesheet">
+     <link href="prettify.css" type="text/css" rel="stylesheet" />
+     <script type="text/javascript" src="prettify.js"></script>
 </head>
-<body>
+
+<body onload="pretyPrint()">
 
     <nav>
-		<p>Club Ducks</p>
+		<p>Coding Ducks</p>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="puzzlePage.html">Puzzles</a></li>
@@ -19,18 +23,22 @@
 		</ul>
 	</nav>
 
-     <h2>Puzzles</h2>
+     <h2 class ="puzzleTitle">Puzzles</h2>
 
 
 
 
+     <p class = "question">To graduate from the Kunfu one has to use Numchick sequence. There are 3 pinapples on the counter. One is in the queue but cannot be freinds with carrot. It isnt posible because fish cant breathe in soda. My toolbox is loose so the hen is not in the It is a weapon that can be used. Who wins?</p>
 
-     <div>To graduate from the Kunfu one has to use Numchick sequence. THere are 3 pinapples on the counter. ONe is in the queue but cannot be freinds with carrot. It isnt posible because fish cant breathe in soda. My toolbox is loose so the hen is not in the It is a weapon that can be used. Who wins?</div>
+     <pre class="prettyprint">
+          if (true){
+               return 5;
+          }</pre>
 
 
      <form id = "userSolution">
-          Your solution:
-          <input type = "text" name="fname" value ="don">
+          What does the function return?
+          <input type = "text" name="fname"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
@@ -38,9 +46,9 @@
 
      <button onclick = "getText()">Submit</button>
 
-     <p id="resultr"></p>
+     <p id="result"></p>
 
-
+     <p id="correctAnswer"></p>
 
 
 
