@@ -203,7 +203,7 @@ class Grid {
         this.height = array.length;
         this.width = array[0].length;
         this.start = start;
-        this.imgLength = Math.min( (window.innerWidth-250) / (this.width+1), (window.innerHeight-100) / (this.height+1)) - 2;
+        this.imgLength = Math.min( (window.innerWidth-250) / (this.width+1), (window.innerHeight-100) / (this.height+1));
     }
 
     getStart() {
@@ -251,11 +251,11 @@ class Point {
     }
 
     absoluteX(grid) {
-        return this.x * grid.getImgLength() + 18;
+        return this.x * grid.getImgLength() + 10;
     }
 
     absoluteY(grid) {
-        return this.y * grid.getImgLength() + 18;
+        return this.y * grid.getImgLength() + 7;
     }
 
     toString() {
@@ -274,6 +274,7 @@ function resetArrow( grid ) {
 }
 
 function handleForm() {
+    document.getElementById("Response").innerHTML = ""
     var solution = document.getElementById("solution").value.split(" ");
     console.log("Attempted solution was " + solution.toString());
     for(let i = 0; i < solution.length; i++) {
@@ -282,6 +283,7 @@ function handleForm() {
             return;
         }
     }
+    solution.push("end");
     var arrow = resetArrow(boardArray[curBoard]);
     executeMoveOrder( boardArray[curBoard].getStart(), solution, arrow, boardArray[curBoard]);
 }
@@ -293,11 +295,12 @@ function handleForm() {
  */
 function checkVictory(pos, grid) {
    if ( grid.getBox( pos.getX(), pos.getY() ) == "lilypad.png" ) {
-       alert("you won");
+       document.getElementById("Response").innerHTML = "Congratulations, you WON. Try beating the next level!!";
    }
 }
 
 function previousLevel() {
+    document.getElementById("Response").innerHTML = ""
     if (curBoard == 0) {
         alert("You're already on the lowest level");
     }
@@ -317,6 +320,7 @@ function previousLevel() {
 }
 
 function nextLevel() {
+    document.getElementById("Response").innerHTML = ""
     if (curBoard + 1 >= boardArray.length) {
         alert("You're already on the highest level");
     }
