@@ -211,6 +211,10 @@ class Grid {
         return this.boxes[y][x];
     }
 
+    toString() {
+        return this.boxes.toString();
+    }
+
 }
 
 /**
@@ -255,7 +259,9 @@ function resetArrow( grid ) {
 }
 
 function handleForm() {
-    let solution = document.getElementById("solution").value.split(" ");
+    //console.log(document.getElementById("solution").value);
+    console.log(curBoard.toString());
+    var solution = document.getElementById("solution").value.split(" ");
     console.log("Attempted solution was " + solution.toString());
     for(let i = 0; i < solution.length; i++) {
         if (solution[i] != "right" && solution[i] != "left" && solution[i] != "down" && solution[i] != "up") {
@@ -263,8 +269,9 @@ function handleForm() {
             return;
         }
     }
-    let arrow = resetArrow(curBoard);
+    var arrow = resetArrow(curBoard);
     executeMoveOrder( curBoard.getStart(), solution, arrow, curBoard);
+    return false;
 }
 
 window.onload = () => {
@@ -280,5 +287,8 @@ window.onload = () => {
     new Point( 0, 4 ) );
 
     generate(curBoard) //End first argument
+
+    //document.getElementById("solution").value = "right up";
+    //handleForm();
  };
 
