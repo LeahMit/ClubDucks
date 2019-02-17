@@ -28,22 +28,22 @@
      <p id = "coinCount">0 Gold</p>
      <p id = "coinNumber">0</p>
 
-     <p class = "question">Is it true that 2+3=5? If yes return the answer!</p>
 
+     <p class = "question">Is it true that 2+3=5? If yes return the answer!</p>
      <pre class="prettyprint">
           if (true){
                return 5;
           }</pre>
 
 
-     <form id = "userAnswer1">
+     <form id = "userAnswer1" onSubmit="return false;">
           What does the function return?
           <input type = "text" name="answerTextBox"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
+          <button type="button" onclick = "submitAnswer1()">Submit</button>
      </form>
-     <button type="button" onclick = "submitAnswer1()">Submit</button>
      <p id="result1"></p>
      <p id="correctness1"></p>
 
@@ -51,7 +51,6 @@
 
 
      <p class = "question">Leah's new name is 8, John's new name is 6, and Caleb's new name is 14. Return Leah's new name!</p>
-
      <pre class="prettyprint">
           x = 8
           y = 6
@@ -59,15 +58,14 @@
           {
                return x;
           }</pre>
-
      <form id = "userAnswer2">
           What does the function return?
           <input type = "text" name="answerTextBox"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
+          <button onclick = "submitAnswer2()">Submit</button>
      </form>
-     <button onclick = "submitAnswer2()">Submit</button>
      <p id="result2"></p>
      <p id="correctness2"></p>
 
