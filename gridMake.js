@@ -198,7 +198,7 @@ class Grid {
         this.height = array.length;
         this.width = array[0].length;
         this.start = start;
-        this.imgLength = Math.min( (window.innerWidth-350) / (this.width+1), (window.innerHeight-200) / (this.height+1)) - 5;
+        this.imgLength = Math.min( (window.innerWidth-250) / (this.width+1), (window.innerHeight-100) / (this.height+1)) - 2;
     }
 
     getStart() {

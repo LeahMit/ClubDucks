@@ -24,8 +24,21 @@
 	</nav>
 	<div id="Title"><h1>Can you solve the grid puzzles?</h1></div>
 	<div id="GridHolder">
+		<div class="transparent">
+			<button type="button" onclick="previousLevel()">Previous Level</button>
+			<p>Feeling a little Confident?</p>
+			<button type="button" onclick="nextLevel()">Next Level</button>
+		</div>
 		<div id="Grid">
 		</div>
+		<form class="transparent" id="postForm">
+			<p>
+				<label>Your Solution Here</label>
+				<input type="text" id="solution" name="dogName">
+			</p>
+			<button type="button" onclick="handleForm()">Submit Post!</button>
+			<p id="Response"></p>
+		</form>
 	</div>
 
 	<div>
@@ -35,18 +48,6 @@
 				An example solution would be to get the duck to move 2 spaces up and 1 space left by inputing the 
 			command "up up left" into the submission box then pressing the button. If you feel like trying out something
 			a little harder, click the "Next Level" Button lower down on the page.</p>
-		</div>
-		<form class="transparent" id="postForm">
-			<p>
-				<label>Your Solution Here</label>
-				<input type="text" id="solution" name="dogName">
-			</p>
-			<button type="button" onclick="handleForm()">Submit Post!</button>
-		</form>
-		<div class="transparent">
-			<button type="button" onclick="previousLevel()">Previous Level</button>
-			<p>Feeling a little Confident?</p>
-			<button type="button" onclick="nextLevel()">Next Level</button>
 		</div>
 	</div>
 
