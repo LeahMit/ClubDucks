@@ -13,7 +13,7 @@ function submitAnswer1(){
           // var currentNumber = coinNumber.elements[0].value;
           var newNumber = parseInt(coinNumber) + 5;
           console.log(newNumber);
-          var numberText = newNumber + " Gold";
+          var numberText = newNumber + " Coins";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness1").style.color = "green";
@@ -43,7 +43,7 @@ function submitAnswer2(){
           // var currentNumber = coinNumber.elements[0].value;
           var newNumber = parseInt(coinNumber) + 5;
           console.log(newNumber);
-          var numberText = newNumber + " Gold";
+          var numberText = newNumber + " Coins";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness2").style.color = "green";
@@ -73,7 +73,7 @@ function submitAnswer3(){
           // var currentNumber = coinNumber.elements[0].value;
           var newNumber = parseInt(coinNumber) + 5;
           console.log(newNumber);
-          var numberText = newNumber + " Gold";
+          var numberText = newNumber + " Coins";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness3").style.color = "green";
@@ -104,7 +104,7 @@ function submitAnswer4(){
           // var currentNumber = coinNumber.elements[0].value;
           var newNumber = parseInt(coinNumber) + 5;
           console.log(newNumber);
-          var numberText = newNumber + " Gold";
+          var numberText = newNumber + " Coins";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness4").style.color = "green";
@@ -134,7 +134,7 @@ function submitAnswer5(){
           // var currentNumber = coinNumber.elements[0].value;
           var newNumber = parseInt(coinNumber) + 5;
           console.log(newNumber);
-          var numberText = newNumber + " Gold";
+          var numberText = newNumber + " Coins";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness5").style.color = "green";
