@@ -14,7 +14,7 @@ nav p{
 }
 
 body {
-	background: 	#f9f6fa;
+	background: 	#fcfcfc;
 	display: 		flex;
 	flex-direction: column;
 	font-family: 	'Titillium Web', "Times New Roman", Times, serif;
@@ -23,7 +23,7 @@ body {
 #Title {
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.418);
 	margin-bottom: 15px;
-	width: 100%;
+	width: 		100%;
 }
 
 h1 {
@@ -32,7 +32,7 @@ h1 {
 	font-size: 	75px;
 	width: 		92%;
 	padding: 		10px;
-	border-bottom: 1px solid black;
+	/* border-bottom: 1px solid black; */
 }
 
 h2 {
@@ -66,7 +66,7 @@ p {
 	margin: 		70px 18vw;
 	padding: 		50px 0px;
 	font-family: 	'Cousine', monospace;
-	background-color: 	#efefef;
+	background-color: 	#f4f4f4;
 	border-radius: 25px 25px;
 	color: 		#6d6d6d;
 }
@@ -77,8 +77,10 @@ p {
 	color: 		green;
 }
 #coinCount{
+	position:		sticky;
+	top: 90px;
+	margin-top: 50px;
 	text-align:  	right;
-	margin-right: 	40px;
 }
 #coinNumber{
 	display: 		none;
@@ -126,7 +128,7 @@ input[type=text], textarea {
 	border-bottom: 3px silver;
 	border-radius: 3px;
 	background: 	#c9ddc5;
-	color: 		white;
+	color: 		black;
 	font-size: 	1em;
 }
 
@@ -140,6 +142,7 @@ input [type=radio] {
 }
 .textBox{
 	text-align: center;
+	padding-bottom: 200px;
 }
 
 button {
