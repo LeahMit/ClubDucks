@@ -100,6 +100,7 @@ div{
 	background-color: transparent;
 	display: 		flex;
 	justify-content: space-around;
+	align-content: center;
 	flex-flow: 	row wrap;
 }
 #MainPage{
