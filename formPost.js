@@ -19,7 +19,7 @@ function submitAnswer1(){
           document.getElementById("correctness1").innerHTML = "Correct!";
      }
      else{
-          document.getElementById("correctness1").innerHTML = "Incorrect";
+          document.getElementById("correctness1").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result1").innerHTML = "Your answer was: " + text;
      return false;
@@ -47,7 +47,7 @@ function submitAnswer2(){
           document.getElementById("correctness2").innerHTML = "Correct!";
      }
      else{
-          document.getElementById("correctness2").innerHTML = "Incorrect";
+          document.getElementById("correctness2").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result2").innerHTML = "Your answer was: " + text;
      return false;
@@ -75,7 +75,7 @@ function submitAnswer3(){
           document.getElementById("correctness3").innerHTML = "Correct!";
      }
      else{
-          document.getElementById("correctness3").innerHTML = "Incorrect";
+          document.getElementById("correctness3").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result3").innerHTML = "Your answer was: " + text;
      return false;
@@ -104,7 +104,7 @@ function submitAnswer4(){
           document.getElementById("correctness4").innerHTML = "Correct!";
      }
      else{
-          document.getElementById("correctness4").innerHTML = "Incorrect";
+          document.getElementById("correctness4").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result4").innerHTML = "Your answer was: " + text;
      return false;
@@ -132,7 +132,7 @@ function submitAnswer5(){
           document.getElementById("correctness5").innerHTML = "Correct!";
      }
      else{
-          document.getElementById("correctness5").innerHTML = "Incorrect";
+          document.getElementById("correctness5").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result5").innerHTML = "Your answer was: " + text;
      return false;
