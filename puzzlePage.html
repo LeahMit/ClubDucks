@@ -13,15 +13,15 @@
 
 <body onload="prettyPrint()">
 
-    <nav>
-		<p>Coding Ducks</p>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="puzzlePage.html">Puzzles</a></li>
-			<li><a href="gridPuzzle.html">Grid</a></li>
-			<li><a href="about.html">About</a></li>
-		</ul>
-	</nav>
+     <nav>
+     	<p>Coding Ducks</p>
+     	<ul>
+     		<li><a href="index.html">Home</a></li>
+     		<li><a href="puzzlePage.html">Puzzles</a></li>
+     		<li><a href="gridPuzzle.html">Grid</a></li>
+     		<li><a href="about.html">About</a></li>
+     	</ul>
+     </nav>
 
      <h1>Puzzles</h1>
 
@@ -36,19 +36,18 @@
           }</pre>
 
 
-     <form id = "userSolution">
+     <form id = "userAnswer1">
           What does the function return?
-          <input type = "text" name="fname"> <!--value ="don">-->
+          <input type = "text" name="answerTextBox"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
      </form>
+     <button type="button" onclick = "submitAnswer1()">Submit</button>
+     <p id="result1"></p>
+     <p id="correctness1"></p>
 
-     <button type="button" onclick = "getText()">Submit</button>
 
-     <p id="result"></p>
-
-     <p id="correctAnswer"></p>
 
 
      <p class = "question">Leah's new name is 8, John's new name is 6, and Caleb's new name is 14. Return Leah's new name!</p>
@@ -61,20 +60,18 @@
                return x;
           }</pre>
 
-
-     <form id = "userSolution">
+     <form id = "userAnswer2">
           What does the function return?
-          <input type = "text" name="fname"> <!--value ="don">-->
+          <input type = "text" name="answerTextBox"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
      </form>
+     <button onclick = "submitAnswer2()">Submit</button>
+     <p id="result2"></p>
+     <p id="correctness2"></p>
 
-     <button onclick = "getText()">Submit</button>
 
-     <p id="result"></p>
-
-     <p id="correctAnswer"></p>
 
 
      <p class = "question">Megha has been given a new name called 3. Is it true that Megha's new name is 4?</p>
@@ -90,19 +87,18 @@
      </pre>
 
 
-     <form id = "userSolution">
+     <form id = "userAnswer3">
           What does the function return?
           <input type = "text" name="fname"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
      </form>
+     <button onclick = "submitAnswer3()">Submit</button>
+     <p id="result3"></p>
+     <p id="correctness3"></p>
 
-     <button onclick = "getText()">Submit</button>
 
-     <p id="result"></p>
-
-     <p id="correctAnswer"></p>
 
 
      <p class = "question">If John's new name is 2 and Megha's new name is 4, is John's and Megha's new name the same?</p>
@@ -119,19 +115,18 @@
      </pre>
 
 
-     <form id = "userSolution">
+     <form id = "userAnswer4">
           What does the function return?
           <input type = "text" name="fname"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
      </form>
+     <button onclick = "submitAnswer4()">Submit</button>
+     <p id="result4"></p>
+     <p id="correctness4"></p>
 
-     <button onclick = "getText()">Submit</button>
 
-     <p id="result"></p>
-
-     <p id="correctAnswer"></p>
 
 
      <p class = "question">Caleb has 4 apples and Leah has 5 apples. How many apples do Caleb and Leah have? </p>
@@ -144,19 +139,16 @@
           }</pre>
 
 
-     <form id = "userSolution">
+     <form id = "userAnswer5">
           What does the function return?
           <input type = "text" name="fname"> <!--value ="don">-->
 
           <!-- <input type = "submit"   value = "Submit"> -->
           <!-- <input type = "button" onclick="getText()" value="Submit"> -->
      </form>
-
-     <button onclick = "getText()">Submit</button>
-
-     <p id="result"></p>
-
-     <p id="correctAnswer"></p>
+     <button onclick = "submitAnswer5()">Submit</button>
+     <p id="result5"></p>
+     <p id="correctness5"></p>
 
 
 
