@@ -16,9 +16,11 @@ function submitAnswer1(){
           var numberText = newNumber + " Gold";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
+          document.getElementById("correctness1").style.color = "green";
           document.getElementById("correctness1").innerHTML = "Correct!";
      }
      else{
+          document.getElementById("correctness1").style.color = "red";
           document.getElementById("correctness1").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result1").innerHTML = "Your answer was: " + text;
@@ -44,9 +46,11 @@ function submitAnswer2(){
           var numberText = newNumber + " Gold";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
+          document.getElementById("correctness2").style.color = "green";
           document.getElementById("correctness2").innerHTML = "Correct!";
      }
      else{
+          document.getElementById("correctness2").style.color = "red";
           document.getElementById("correctness2").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result2").innerHTML = "Your answer was: " + text;
@@ -72,9 +76,11 @@ function submitAnswer3(){
           var numberText = newNumber + " Gold";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
+          document.getElementById("correctness3").style.color = "green";
           document.getElementById("correctness3").innerHTML = "Correct!";
      }
      else{
+          document.getElementById("correctness3").style.color = "red";
           document.getElementById("correctness3").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result3").innerHTML = "Your answer was: " + text;
@@ -101,9 +107,11 @@ function submitAnswer4(){
           var numberText = newNumber + " Gold";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
+          document.getElementById("correctness4").style.color = "green";
           document.getElementById("correctness4").innerHTML = "Correct!";
      }
      else{
+          document.getElementById("correctness4").style.color = "red";
           document.getElementById("correctness4").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result4").innerHTML = "Your answer was: " + text;
@@ -129,9 +137,11 @@ function submitAnswer5(){
           var numberText = newNumber + " Gold";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
+          document.getElementById("correctness5").style.color = "green";
           document.getElementById("correctness5").innerHTML = "Correct!";
      }
      else{
+          document.getElementById("correctness5").style.color = "red";
           document.getElementById("correctness5").innerHTML = "Incorrect, try again";
      }
      document.getElementById("result5").innerHTML = "Your answer was: " + text;
