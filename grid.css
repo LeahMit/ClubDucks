@@ -43,8 +43,9 @@ nav {
 }
 
 #Description {
-    border-top: 2px solid rgb(53, 53, 53);
-    width: 80%;
+    margin-top: 20px;
+    box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.418);
+    width: 100%;
     text-align: center;
 }
 

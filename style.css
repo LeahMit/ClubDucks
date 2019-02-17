@@ -10,7 +10,7 @@ nav p{
 }
 
 .duck {
-	width:		50%;
+	width:	50%;
 }
 
 body {
@@ -22,6 +22,8 @@ body {
 
 #Title {
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.418);
+	margin-bottom: 15px;
+	width: 100%;
 }
 
 h1 {
@@ -49,6 +51,11 @@ h3 {
 p {
 	font-size: 	27px;
 	margin: 		15px;
+}
+
+#End {
+	margin-top: 20px;
+	box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.418);
 }
 
 .bullet {
