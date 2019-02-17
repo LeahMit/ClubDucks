@@ -39,11 +39,6 @@ function generate( grid , start) {
     console.log( arrow.style.left );
     gen.appendChild(arrow);
 
-
-    //Starts moving the arrow
-    console.log("Executing Move Order");
-    executeMoveOrder( start, ["right", "up", "left", "down", "right", "left"], arrow, grid);
-
 }
 
 /**
@@ -226,6 +221,7 @@ class Point {
 
 window.onload = () => {
     // Once our window is loaded, we generate the first grid
+
     generate( new Grid( [ ["blocked.png", "waves.gif", "stop.png", "waves.gif", "waves.gif"],
     [ "blocked.png", "blocked.png", "blocked.png", "blocked.png", "waves.gif" ],
     ["blocked.png", "waves.gif", "waves.gif", "blocked.png", "waves.gif"],
