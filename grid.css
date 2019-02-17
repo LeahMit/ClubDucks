@@ -34,6 +34,7 @@ nav {
 }
 
 #postForm {
+    box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.418);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;

@@ -1,6 +1,6 @@
 //Big Fields used throughout the program
-var curBoard;
-
+var curBoard = 0; //Keeps track of the current play board
+var boardArray = []; //Array to hold all boards
 /**
  * Draws the game grid onto the frame
  * @param {Grid} grid The grid on which the game is played
@@ -46,6 +46,16 @@ function generate( grid ) {
     arrow.style.left = (start.getX() * imgLength + 18).toString() + "px";
     gen.appendChild(arrow);
 
+}
+
+/**
+ * Removes all the child nodes of the Grid element
+ */
+function removeBoard() {
+    var board = document.getElementById("Grid");
+    while (board.hasChildNodes()) {
+        board.removeChild(board.firstChild);
+    }
 }
 
 /**
@@ -259,8 +269,6 @@ function resetArrow( grid ) {
 }
 
 function handleForm() {
-    //console.log(document.getElementById("solution").value);
-    console.log(curBoard.toString());
     var solution = document.getElementById("solution").value.split(" ");
     console.log("Attempted solution was " + solution.toString());
     for(let i = 0; i < solution.length; i++) {
@@ -269,9 +277,29 @@ function handleForm() {
             return;
         }
     }
-    var arrow = resetArrow(curBoard);
-    executeMoveOrder( curBoard.getStart(), solution, arrow, curBoard);
+    var arrow = resetArrow(boardArray[curBoard]);
+    executeMoveOrder( boardArray[curBoard].getStart(), solution, arrow, boardArray[curBoard]);
     return false;
+}
+
+function previousLevel() {
+    if (curBoard == 0) {
+        alert("You're already on the lowest level");
+    }
+    else {
+        removeBoard();
+        generate( boardArray[ --curBoard ] );
+    }
+}
+
+function nextLevel() {
+    if (curBoard + 1 >= boardArray.length) {
+        alert("You're already on the highest level");
+    }
+    else {
+        removeBoard();
+        generate( boardArray[ ++curBoard ] );
+    }
 }
 
 window.onload = () => {
@@ -279,13 +307,20 @@ window.onload = () => {
 
     console.log("Window Loading");
 
-    curBoard = new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
-    [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
-    ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
-    ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
-    ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] , //List argument
-    new Point( 0, 4 ) );
+    //Populating the BoardArray variable
+    boardArray.push( new Grid([ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
+        [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
+        ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
+        ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
+        ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ], new Point(0, 4) ) ); //First level
 
-    generate(curBoard) //End first argument
+    boardArray.push( new Grid( [ ["start.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", "cattail.png", ],
+        ["waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "cattail.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "cattail.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "waves.gif", "lilypad.png"],
+        ["cattail.png", "waves.gif", "cattail.png", "cattail.png", "cattail.png", "waves.gif"],
+        ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ], new Point( 0, 0) ));
+
+    generate(boardArray[curBoard]) //End first argument
  };
 
