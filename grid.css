@@ -27,6 +27,15 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-content: center;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+#Grid .row img {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 nav {
