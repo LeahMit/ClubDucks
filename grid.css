@@ -27,9 +27,17 @@ nav {
     position: relative;
 }
 
+#Description {
+    border-top: 2px solid rgb(53, 53, 53);
+    width: 80%;
+    text-align: center;
+}
+
 #postForm {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: stretch;
 }
 
 

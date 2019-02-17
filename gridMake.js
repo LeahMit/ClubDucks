@@ -287,8 +287,5 @@ window.onload = () => {
     new Point( 0, 4 ) );
 
     generate(curBoard) //End first argument
-
-    //document.getElementById("solution").value = "right up";
-    //handleForm();
  };
 
