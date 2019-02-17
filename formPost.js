@@ -1,3 +1,9 @@
+var q1Complete =    false;
+var q2Complete =    false;
+var q3Complete =    false;
+var q4Complete =    false;
+var q5Complete =    false;
+
 function submitAnswer1(){
      var y = document.getElementById("userAnswer1");
      var text = "";
@@ -5,7 +11,7 @@ function submitAnswer1(){
      for (i = 0;  i < y.length;  i++){
           text += y.elements[i].value; //+ "<br>";
      }
-     if (text == "5"){
+     if (text == "5" && q1Complete == false){
           console.log("start");
           var coinNumber = document.getElementById("coinNumber").textContent;
           //console.log(coinNumber);
@@ -18,6 +24,11 @@ function submitAnswer1(){
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness1").style.color = "green";
           document.getElementById("correctness1").innerHTML = "Correct!";
+          q1Complete = true;
+     }
+     else if(q1Complete){
+          document.getElementById("correctness1").style.color = "green";
+          document.getElementById("correctness1").innerHTML = "You already answered this correctly!";
      }
      else{
           document.getElementById("correctness1").style.color = "red";
@@ -35,7 +46,7 @@ function submitAnswer2(){
      for (i = 0;  i < y.length;  i++){
           text += y.elements[i].value; //+ "<br>";
      }
-     if (text == "8"){
+     if (text == "8" && q2Complete == false){
           console.log("start");
           var coinNumber = document.getElementById("coinNumber").textContent;
           //console.log(coinNumber);
@@ -48,10 +59,15 @@ function submitAnswer2(){
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness2").style.color = "green";
           document.getElementById("correctness2").innerHTML = "Correct!";
+          q2Complete = true;
+     }
+     else if(q2Complete == true){
+          document.getElementById("correctness2").style.color = "green";
+          document.getElementById("correctness2").innerHTML = "Incorrect, try again";
      }
      else{
           document.getElementById("correctness2").style.color = "red";
-          document.getElementById("correctness2").innerHTML = "Incorrect, try again";
+          document.getElementById("correctness2").innerHTML = "You already answered this correctly!";
      }
      document.getElementById("result2").innerHTML = "Your answer was: " + text;
      return false;
@@ -65,7 +81,7 @@ function submitAnswer3(){
      for (i = 0;  i < y.length;  i++){
           text += y.elements[i].value; //+ "<br>";
      }
-     if (text == "False" || text == "false" || text == "f"){
+     if ((text == "False" || text == "false" || text == "f") && q3Complete == false){
           console.log("start");
           var coinNumber = document.getElementById("coinNumber").textContent;
           //console.log(coinNumber);
@@ -78,6 +94,11 @@ function submitAnswer3(){
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness3").style.color = "green";
           document.getElementById("correctness3").innerHTML = "Correct!";
+          q3Complete = true;
+     }
+     else if(q3Complete == true){
+          document.getElementById("correctness3").style.color = "green";
+          document.getElementById("correctness3").innerHTML = "You already answered this correctly!";
      }
      else{
           document.getElementById("correctness3").style.color = "red";
@@ -96,7 +117,7 @@ function submitAnswer4(){
      for (i = 0;  i < y.length;  i++){
           text += y.elements[i].value; //+ "<br>";
      }
-     if (text == "False" || text == "false" || text == "f"){
+     if ((text == "False" || text == "false" || text == "f") && q4Complete == false){
           console.log("start");
           var coinNumber = document.getElementById("coinNumber").textContent;
           //console.log(coinNumber);
@@ -109,6 +130,11 @@ function submitAnswer4(){
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness4").style.color = "green";
           document.getElementById("correctness4").innerHTML = "Correct!";
+          q4Complete = true;
+     }
+     else if(q4Complete == true){
+          document.getElementById("correctness4").style.color = "green";
+          document.getElementById("correctness4").innerHTML = "You already answered this correctly!";
      }
      else{
           document.getElementById("correctness4").style.color = "red";
@@ -126,7 +152,7 @@ function submitAnswer5(){
      for (i = 0;  i < y.length;  i++){
           text += y.elements[i].value; //+ "<br>";
      }
-     if (text == "9"){
+     if (text == "9" && q5Complete == false){
           console.log("start");
           var coinNumber = document.getElementById("coinNumber").textContent;
           //console.log(coinNumber);
@@ -139,6 +165,11 @@ function submitAnswer5(){
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
           document.getElementById("correctness5").style.color = "green";
           document.getElementById("correctness5").innerHTML = "Correct!";
+          q5Complete = true;
+     }
+     else if(q5Complete == true){
+          document.getElementById("correctness5").style.color = "green";
+          document.getElementById("correctness5").innerHTML = "You already answered this correctly!";
      }
      else{
           document.getElementById("correctness5").style.color = "red";
