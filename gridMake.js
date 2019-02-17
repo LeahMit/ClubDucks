@@ -39,19 +39,123 @@ function generate( grid , start) {
     console.log( arrow.style.left );
     gen.appendChild(arrow);
 
-    moveRight( new Point( start.getX()+1, start.getY() ).absoluteX() );
+
+    //Starts moving the arrow
+    console.log("Executing Move Order");
+    executeMoveOrder( start, ["right", "up", "left", "down", "right", "left"], arrow, grid);
 
 }
 
-function moveRight(xNext) {
-    var x = document.getElementById("arrow").style.left;
+/**
+ * Starts the game as programmed
+ * @param {Point} pos The currenty position of the arrow
+ * @param {String[]} order The elements of moving the arrow will take
+ * @param {Element} arrow The HTML element containing the arrow
+ * @param {Grid} grid The grid containing the game
+ */
+function executeMoveOrder( pos, order, arrow, grid ) {
+    console.log("Moves to Execute:" + order.toString() );
+
+    //Check if current position links to a blocked tile
+
+    if (order.length > 0) {
+        switch (order[0]) {
+            case "right":
+                console.log("Right");
+                moveRight(pos, order.slice(1), arrow, grid);
+                break;
+            case "up":
+                console.log("up");
+                moveUp(pos, order.slice(1), arrow, grid);
+                break;
+            case "down":
+                console.log("down");
+                moveDown(pos, order.slice(1), arrow, grid);
+                break;
+            case "left":
+                console.log("left");
+                moveLeft(pos, order.slice(1), arrow, grid);
+                break;
+        }//End of switch statement
+    }
+}
+
+/**
+ * Moves the arrow one to the right
+ * @param {*} pos Must be a Point object
+ */
+function moveRight(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX()+1, pos.getY() );
+    xNext = endPos.absoluteX(grid);
+    var x = parseFloat( arrow.style.left );
+
     var id = setInterval(frame, 5);
     function frame() {
+        //Animation Loop
+        if (xNext < x) {
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
+        }
+        else {
+            x++;
+            arrow.style.left = x.toString() + "px";
+        }
+    }
+}
+
+function moveLeft(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX()-1, pos.getY() );
+    xNext = endPos.absoluteX(grid);
+    var x = parseFloat( arrow.style.left );
+
+    var id = setInterval(frame, 5);
+    function frame() {
+        //Animation Loop
         if (xNext > x) {
-        clearInterval(id);
-        } else {
-            x++
-            document.getElementById("arrow").style.left = x;
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
+        }
+        else {
+            x--;
+            arrow.style.left = x.toString() + "px";
+        }
+    }
+}
+
+function moveUp(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX(), pos.getY()-1 );
+    yNext = endPos.absoluteY(grid);
+    var y = parseFloat( arrow.style.top );
+
+    var id = setInterval(frame, 5);
+    function frame() {
+        //Animation Loop
+        if (yNext > y) {
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
+        }
+        else {
+            y--;
+            arrow.style.top = y.toString() + "px";
+        }
+    }
+}
+
+function moveDown(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX(), pos.getY()+1 );
+    yNext = endPos.absoluteY(grid);
+    var y = parseFloat( arrow.style.top );
+
+    var id = setInterval(frame, 5);
+    function frame() {
+        //Animation Loop
+        if (yNext < y) {
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
+        }
+        else {
+            y++;
+            arrow.style.top = y.toString() + "px";
         }
     }
 }
@@ -106,7 +210,11 @@ class Point {
     }
 
     absoluteX(grid) {
-        return this.x * getImgLength() + 18;
+        return this.x * grid.getImgLength() + 18;
+    }
+
+    absoluteY(grid) {
+        return this.y * grid.getImgLength() + 18;
     }
 
     toString() {
@@ -122,5 +230,5 @@ window.onload = () => {
     ["blocked.png", "unblocked.png", "unblocked.png", "blocked.png", "unblocked.png"],
     ["blocked.png", "unblocked.png", "unblocked.png", "unblocked.png", "unblocked.png"],
     ["start.png", "unblocked.png", "blocked.png", "unblocked.png", "unblocked.png"] ] ) , //End first argument
-    new Point( 0.0, 4.0 ) );
+    new Point( 2.0, 2.0 ) );
  };
