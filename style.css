@@ -36,6 +36,12 @@ h2 {
 	color: red;
 }
 
+h3 {
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+
 p {
 	font-size: 27px;
 	margin: 15px;
