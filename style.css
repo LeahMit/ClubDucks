@@ -22,8 +22,9 @@ body {
 
 #Title {
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.418);
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 	width: 		100%;
+	z-index: 10;
 }
 
 h1 {
@@ -136,10 +137,6 @@ input[type=text], textarea {
 	font-size: 	1em;
 }
 
-
-input [type=radio] {
-	color: 		#f9a9c8;
-}
 
 .question{
 	text-align: center;
@@ -311,7 +308,6 @@ select {
 .titles {
 	font-size: 	40px;
 	color:		red;
-	margin-top: 	70px;
 }
 
 a {
