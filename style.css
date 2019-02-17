@@ -117,7 +117,7 @@ input[type=text], textarea {
 	font-size: 	1em;
 }
 
-<<<<<<< HEAD
+
 input [type=radio] {
 	color: 		#f9a9c8;
 }
@@ -126,8 +126,6 @@ input [type=radio] {
 	text-align: center;
 }
 
-=======
->>>>>>> 4017b29e7ad6772b2822007ce7a713bfb9a2b32f
 button {
 	background-color: 	#6ab1e8;
 	border: 			none;
