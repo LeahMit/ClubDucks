@@ -58,6 +58,10 @@ function executeMoveOrder( pos, order, arrow, grid ) {
     }
     
     //Check if current position links to a blocked tile
+    if ( grid.getBox( pos.getX(), pos.getY() ) == "cattail.png" ) {
+        alert("You've moved into a blocked region");
+        return;
+    }
 
     //Execute the move
     if (order.length > 0) {
