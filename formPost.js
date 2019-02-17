@@ -7,14 +7,20 @@ function getText(){
      }
      if (text == "5"){
           console.log("the");
-          var currentNumber = parseInt(document.getElementById("coinNumber"));
-          console.log(currentNumber);
-          var newNumber = currentNumber + 5;
+          var coinNumber = document.getElementById("coinNumber").textContent;
+          //console.log(coinNumber);
+          // console.log(coinNumber.elements[0]);
+          // var currentNumber = coinNumber.elements[0].value;
+          var newNumber = parseInt(coinNumber) + 5;
           console.log(newNumber);
           var numberText = newNumber + " Gold";
           document.getElementById("coinNumber").innerHTML = newNumber;
           document.getElementById("coinCount").innerHTML = numberText;//newNumber + " Gold";
-          document.getElementById("correctAnswer").innerHTML = "Correct!"
+          document.getElementById("correctAnswer").innerHTML = "Correct!";
+     }
+     else{
+          document.getElementById("correctAnswer").innerHTML = "Incorrect";
      }
      document.getElementById("result").innerHTML = "Your answer was: " + text;
+     return false;
 }
