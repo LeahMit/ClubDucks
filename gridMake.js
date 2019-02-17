@@ -58,6 +58,7 @@ function executeMoveOrder( pos, order, arrow, grid ) {
 
     //Check if current position links to a blocked tile
 
+    //Execute the move
     if (order.length > 0) {
         switch (order[0]) {
             case "right":
@@ -225,10 +226,10 @@ class Point {
 
 window.onload = () => {
     // Once our window is loaded, we generate the first grid
-    generate( new Grid( [ ["blocked.png", "unblocked.png", "stop.png", "unblocked.png", "unblocked.png"],
-    [ "blocked.png", "blocked.png", "blocked.png", "blocked.png", "unblocked.png" ],
-    ["blocked.png", "unblocked.png", "unblocked.png", "blocked.png", "unblocked.png"],
-    ["blocked.png", "unblocked.png", "unblocked.png", "unblocked.png", "unblocked.png"],
-    ["start.png", "unblocked.png", "blocked.png", "unblocked.png", "unblocked.png"] ] ) , //End first argument
-    new Point( 2.0, 2.0 ) );
+    generate( new Grid( [ ["blocked.png", "waves.gif", "stop.png", "waves.gif", "waves.gif"],
+    [ "blocked.png", "blocked.png", "blocked.png", "blocked.png", "waves.gif" ],
+    ["blocked.png", "waves.gif", "waves.gif", "blocked.png", "waves.gif"],
+    ["blocked.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
+    ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] ) , //End first argument
+    new Point( 0, 5 ) );
  };

@@ -6,7 +6,7 @@
 }
 
 #Grid {
-    background: #d8d2d2;
+    background-image: url("water.jpg");
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
