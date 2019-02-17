@@ -96,6 +96,10 @@ div{
 	align-items: 	center;
 }
 
+#Divcol{
+	flex-flow: column;
+}
+
 .transparent {
 	width: 		100%;
 	background-color: transparent;
