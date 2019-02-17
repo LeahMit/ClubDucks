@@ -30,23 +30,9 @@
 		<form id="postForm">
 			<p>
 				<label>Your Solution Here</label>
-				<input type="text" id="dogName" name="dogName">
+				<input type="text" id="solution" name="dogName">
 			</p>
-			<p>
-				<label>How good is your Dog?</label>
-				<select name="choices"> 
-					<option value="11">11/10</option>
-					<option value="12">12/10</option>
-					<option value="13">13/10</option>
-					<option value="14">14/10</option>
-					<option value="15">15/10</option>
-				</select>
-			</p>
-			<p>
-				<label>Dog Photo</label>
-				<input type="file" accept=".png, .jpg, .jpeg" id="photo" name="dogPhoto">
-			<p>
-			<button>Submit Post!</button>
+			<button onclick="handleForm()">Submit Post!</button>
 		</form>
 	</div>
 

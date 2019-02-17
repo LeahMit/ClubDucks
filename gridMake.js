@@ -1,5 +1,14 @@
+//Big Fields used throughout the program
+var curBoard;
 
-function generate( grid , start) {
+/**
+ * Draws the game grid onto the frame
+ * @param {Grid} grid The grid on which the game is played
+ */
+function generate( grid ) {
+
+    //Starting space
+    start = grid.getStart();
 
     //Full Div container to send everything to
     var gen = document.getElementById("Grid");
@@ -25,7 +34,7 @@ function generate( grid , start) {
 
     //Creating and giving the start arrow it's base attributes
     var arrow = document.createElement("img");
-    arrow.id = "arrow";
+    arrow.id = "Arrow";
     arrow.src = "arrow.png";
     arrow.style.width = (imgLength-6) + "px";
     arrow.style.height = (imgLength-6) + "px";
@@ -34,9 +43,7 @@ function generate( grid , start) {
     //Positioning the start arrow
     arrow.style.top = (start.getY() * imgLength + 18).toString() + "px"; //15 is added due to the #Grid's padding
     //+3 due to image size difference
-    console.log( arrow.style.top );
     arrow.style.left = (start.getX() * imgLength + 18).toString() + "px";
-    console.log( arrow.style.left );
     gen.appendChild(arrow);
 
 }
@@ -67,7 +74,7 @@ function executeMoveOrder( pos, order, arrow, grid ) {
     if (order.length > 0) {
         switch (order[0]) {
             case "right":
-                console.log("Right");
+                console.log("right");
                 moveRight(pos, order.slice(1), arrow, grid);
                 break;
             case "up":
@@ -95,8 +102,12 @@ function moveRight(pos, order, arrow, grid) {
     xNext = endPos.absoluteX(grid);
     var x = parseFloat( arrow.style.left );
 
+    console.log("Entering Loop");
     var id = setInterval(frame, 5);
+    console.log("Past var id");
+
     function frame() {
+        console.log("Loop frame");
         //Animation Loop
         if (xNext < x) {
             clearInterval(id);
@@ -171,12 +182,17 @@ function moveDown(pos, order, arrow, grid) {
  */
 class Grid {
 
-    constructor(array) {
-        console.log("Works so far");
+    constructor(array, start) {
+        console.log("Generating Grid");
         this.boxes = array;
         this.height = array.length;
         this.width = array[0].length;
+        this.start = start;
         this.imgLength = Math.min( (window.innerWidth-350) / (this.width+1), (window.innerHeight-200) / (this.height+1)) - 5;
+    }
+
+    getStart() {
+        return this.start;
     }
 
     getImgLength(gridWidth, gridHeight) {
@@ -229,13 +245,40 @@ class Point {
 
 }
 
+function resetArrow( grid ) {
+    let arrow = document.getElementById("Arrow");
+    //Positioning the start arrow
+    arrow.style.top = (start.getY() * grid.getImgLength() + 18).toString() + "px"; //15 is added due to the #Grid's padding
+    //+3 due to image size difference
+    arrow.style.left = (start.getX() * grid.getImgLength() + 18).toString() + "px";
+    return arrow;
+}
+
+function handleForm() {
+    let solution = document.getElementById("solution").value.split(" ");
+    console.log("Attempted solution was " + solution.toString());
+    for(let i = 0; i < solution.length; i++) {
+        if (solution[i] != "right" && solution[i] != "left" && solution[i] != "down" && solution[i] != "up") {
+            alert("The solution you have entered cannot be run. It must be a strings of only the words 'up', 'down', 'left', and 'right'.");
+            return;
+        }
+    }
+    let arrow = resetArrow(curBoard);
+    executeMoveOrder( curBoard.getStart(), solution, arrow, curBoard);
+}
+
 window.onload = () => {
     // Once our window is loaded, we generate the first grid
 
-    generate( new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
+    console.log("Window Loading");
+
+    curBoard = new Grid( [ ["cattail.png", "waves.gif", "lilypad.png", "waves.gif", "waves.gif"],
     [ "cattail.png", "cattail.png", "cattail.png", "cattail.png", "waves.gif" ],
     ["cattail.png", "waves.gif", "waves.gif", "cattail.png", "waves.gif"],
     ["cattail.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"],
-    ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] ) , //End first argument
+    ["start.png", "waves.gif", "waves.gif", "waves.gif", "waves.gif"] ] , //List argument
     new Point( 0, 4 ) );
+
+    generate(curBoard) //End first argument
  };
+
