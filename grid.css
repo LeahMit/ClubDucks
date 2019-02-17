@@ -27,5 +27,9 @@ nav {
     position: relative;
 }
 
+#postForm {
+    display: flex;
+    flex-flow: row nowrap;
+}
 
 

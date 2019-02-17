@@ -27,26 +27,14 @@
 	</div>
 
 	<div>
+		<h3> There are four command: up, down, left, and right.</h3>
+		<h3> Example solution to get the duck to move 2 spaces up and 1 space left: up up left</h3>
 		<form id="postForm">
 			<p>
 				<label>Your Solution Here</label>
-				<input type="text" id="dogName" name="dogName">
+				<input type="text" id="solution" name="dogName">
 			</p>
-			<p>
-				<label>How good is your Dog?</label>
-				<select name="choices"> 
-					<option value="11">11/10</option>
-					<option value="12">12/10</option>
-					<option value="13">13/10</option>
-					<option value="14">14/10</option>
-					<option value="15">15/10</option>
-				</select>
-			</p>
-			<p>
-				<label>Dog Photo</label>
-				<input type="file" accept=".png, .jpg, .jpeg" id="photo" name="dogPhoto">
-			<p>
-			<button>Submit Post!</button>
+			<button type="button" onclick="handleForm()">Submit Post!</button>
 		</form>
 	</div>
 
