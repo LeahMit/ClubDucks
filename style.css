@@ -1,7 +1,12 @@
 * {
     margin: 0;
 	padding: 0;
-	border-width: 0; 
+	border-width: 0;
+}
+
+nav p{
+	font-family: 'Titillium Web', 'Exo';
+	font-weight: 900;
 }
 
 body {
@@ -12,8 +17,9 @@ body {
 }
 
 h1 {
+
 	text-align: center;
-	font-size: 75px; 
+	font-size: 75px;
 	width: 92%;
 	padding: 10px;
 	border-bottom: 1px solid black;
@@ -187,15 +193,15 @@ select {
 	h1 {
 		font-size: 55px;
 	}
-	
+
 	h2 {
 		font-size: 27px;
 	}
-	
+
 	p {
 		font-size: 20px;
 	}
-	
+
 	#introduction figure {
 		height: 300px;
 	}
@@ -203,11 +209,11 @@ select {
 	#introduction figure img {
 		width: 243px;
 	}
-	
+
 	#thankyous #pictures figure figcaption {
 		font-size: 22px;
 	}
-	
+
 	#thankyous #pictures figure #norman {
 		width: 285px;
 		height: 300px;
@@ -217,51 +223,51 @@ select {
 		width: 301px;
 		height: 300px;
 	}
-	
+
 	#satForm {
 	flex-flow: column;
 	}
-	
+
 	input[type=text], textarea {
 		width: 60%;
 	}
-	
+
 }
 
 @media only screen and (max-width: 700px) { /*Where the introduction on the home page can't fit the picture and text*/
-	
+
 	#introduction {
 		flex-direction: column;
 		align-items: center;
 	}
-	
+
 	input[type=text], textarea {
 		width: 70%;
 	}
-	
+
 }
 
 @media only screen and (max-width: 399px) { /*Mobile Phone*/
 	h1 {
 		font-size: 40px;
 	}
-	
+
 	h2 {
 		font-size: 20px;
 	}
-	
+
 	p {
 		font-size: 12px;
 	}
-	
+
 	div, #postList {
 		margin: 5px 10px;
 	}
-	
+
 	.transparent {
 		margin: 2px;
 	}
-	
+
 	#introduction figure {
 		height: 247px;
 	}
@@ -269,11 +275,11 @@ select {
 	#introduction figure img {
 		width: 200px;
 	}
-	
+
 	#thankyous #pictures figure figcaption {
 		font-size: 22px;
 	}
-	
+
 	#thankyous #pictures figure #norman {
 		width: 200px;
 		height: 210px;
@@ -283,7 +289,7 @@ select {
 		width: 200px;
 		height: 199px;
 	}
-	
+
 	input[type=text], textarea {
 		width: 80%;
 	}
