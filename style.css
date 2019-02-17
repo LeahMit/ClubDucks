@@ -9,6 +9,10 @@ nav p{
 	font-weight: 900;
 }
 
+.duck {
+	width:50%;
+}
+
 body {
 	background: #f9f6fa;
 	display: flex;
@@ -29,6 +33,7 @@ h2 {
 	font-size: 38px;
 	font-weight: bold;
 	text-align: center;
+	color: red;
 }
 
 p {
