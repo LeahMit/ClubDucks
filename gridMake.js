@@ -39,19 +39,96 @@ function generate( grid , start) {
     console.log( arrow.style.left );
     gen.appendChild(arrow);
 
-    moveRight( new Point( start.getX()+1, start.getY() ).absoluteX() );
+
+    //Starts moving the arrow
+    console.log("Executing Move Order");
+    executeMoveOrder( start, ["right", "right"], arrow, grid);
 
 }
 
-function moveRight(xNext) {
-    var x = document.getElementById("arrow").style.left;
+/**
+ * Starts the game as programmed
+ * @param {Point} pos The currenty position of the arrow
+ * @param {String[]} order The elements of moving the arrow will take
+ * @param {Element} arrow The HTML element containing the arrow
+ * @param {Grid} grid The grid containing the game
+ */
+function executeMoveOrder( pos, order, arrow, grid ) {
+    console.log("Move to Execute:")
+    if (order.length > 1) {
+        console.log("Move Exists");
+        switch (order[0]) {
+            case "right":
+                moveRight(pos, order.slice(1), arrow, grid);
+                console.log("Right");
+        }
+    }
+}
+
+/**
+ * Moves the arrow one to the right
+ * @param {*} pos Must be a Point object
+ */
+function moveRight(pos, order, arrow, grid) {
+    endPos = new Point( pos.getX()+1, pos.getY() );
+    xNext = endPos.absoluteX(grid);
+    var x = parseFloat( arrow.style.left );
+
     var id = setInterval(frame, 5);
     function frame() {
+        //Animation Loop
+        if (xNext < x) {
+            clearInterval(id);
+            executeMoveOrder(endPos, order, arrow, grid);
+        }
+        else {
+            x++;
+            arrow.style.left = x.toString() + "px";
+        }
+    }
+}
+
+function moveLeft(xNext) {
+    var x = parseFloat( document.getElementById("arrow").style.left );
+    var id = setInterval(frame, 5);
+    function frame() {
+        //Animation Loop
         if (xNext > x) {
         clearInterval(id);
-        } else {
-            x++
-            document.getElementById("arrow").style.left = x;
+        }
+        else {
+            x--;
+            document.getElementById("arrow").style.left = x.toString() + "px";
+        }
+    }
+}
+
+function moveUp(yNext) {
+    var y = parseFloat( document.getElementById("arrow").style.top );
+    var id = setInterval(frame, 5);
+    function frame() {
+        //Animation Loop
+        if (yNext > y) {
+        clearInterval(id);
+        }
+        else {
+            y--;
+            document.getElementById("arrow").style.top = y.toString() + "px";
+        }
+    }
+}
+
+function moveDown(yNext) {
+    var y = parseFloat( document.getElementById("arrow").style.top );
+    var id = setInterval(frame, 5);
+    function frame() {
+        //Animation Loop
+        if (yNext < y) {
+        clearInterval(id);
+        }
+        else {
+            y++;
+            document.getElementById("arrow").style.top = y.toString() + "px";
         }
     }
 }
@@ -106,7 +183,11 @@ class Point {
     }
 
     absoluteX(grid) {
-        return this.x * getImgLength() + 18;
+        return this.x * grid.getImgLength() + 18;
+    }
+
+    absoluteY(grid) {
+        return this.y * grid.getImgLength() + 18;
     }
 
     toString() {
@@ -122,5 +203,5 @@ window.onload = () => {
     ["blocked.png", "unblocked.png", "unblocked.png", "blocked.png", "unblocked.png"],
     ["blocked.png", "unblocked.png", "unblocked.png", "unblocked.png", "unblocked.png"],
     ["start.png", "unblocked.png", "blocked.png", "unblocked.png", "unblocked.png"] ] ) , //End first argument
-    new Point( 0.0, 4.0 ) );
+    new Point( 2.0, 2.0 ) );
  };
